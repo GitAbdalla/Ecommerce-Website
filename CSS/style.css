@@ -81,6 +81,7 @@ header{
     left: 0;
     right: 0;
     box-shadow: 5px 8px 8px #d1d1d13b ;
+    z-index: 100;
 }
 header .top_header .container{
     display: flex;
@@ -262,3 +263,101 @@ header .bottom_header .nav_links li.active a
 
 
 /*---------Slider----------*/
+.slider{
+    position: relative;
+    padding-top: 20px;
+}
+
+.slider .container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.slider  .banner_2{
+    width: 23%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slider  .banner_2 a{
+    height: 100%;
+    width: 100%;
+}
+
+.swiper-slide {
+    flex: 0 0 100%;          
+    width: 100%;
+  }
+.slider .container .slide-swp{
+    width: 75%;
+    overflow: hidden;
+    position: relative;
+}
+
+.swiper-wrapper {
+    display: flex;           
+    transition: transform 0.5s ease-in-out;
+    width: 100%;
+  }
+
+.slider .container .slide-swp .swiper-pagination span{
+    background: #fff;
+    opacity: 1;
+}
+
+.swiper-pagination-bullet-active{
+    background: var(--main_color) !important;
+    width: 34px !important;
+    height: 8px !important;
+    border-radius: 30px !important;
+}
+
+.banners_4{
+    margin: 40px 0;
+}
+.banners_4 .container{
+    display: flex;
+    justify-content: space-between;
+}
+.banners_4 .container .box{
+    width: 24%;
+    background-image: url(../img/bg_banner3.jpg);
+    background-size: cover;
+    background-position: center;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 10px;
+    position: relative;
+}
+.banners_4 .container .box img{
+    width: 100px;
+    transition: 0.3;
+}
+.banners_4 .container .box:hover img{
+    scale: 1.05;
+}
+.banners_4 .container .box h5{
+    font-size: 16px;
+}
+.banners_4 .container .box .sale{
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin: 7px 0;
+}
+.banners_4 .container .box .sale span{
+    font-size: 25px;
+    font-weight: bold;
+}
+.banners_4 .container .box h6{
+    font-size: 14px;
+    font-weight: bold;
+}
+.banners_4 .container .box .link_btn{
+position: absolute;
+width: 100%;
+height: 100%;
+background-color:transparent;
+}
