@@ -1,7 +1,7 @@
 [
   {
     "id": 0,
-    "img": "img/product/0.png",
+    "img":"img/product/0.png",
     "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
     "price": 350,
     "catetory":"electronics"

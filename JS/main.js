@@ -34,3 +34,70 @@ document.addEventListener("DOMContentLoaded", function () {
 
   setInterval(nextSlide, 4000);
 });
+
+let scrollAmount = 0;
+  const step = 5 * 240; 
+  const productsEl = document.querySelector(".products");
+  const sliderWrapper = document.querySelector(".slider_products");
+
+  function updateSlider(direction) {
+    const maxScroll = productsEl.scrollWidth - sliderWrapper.offsetWidth;
+
+    if (direction === "right" && scrollAmount + step <= maxScroll) {
+      scrollAmount += step;
+    } else if (direction === "left" && scrollAmount - step >= 0) {
+      scrollAmount -= step;
+    }
+
+    productsEl.style.transform = `translateX(-${scrollAmount}px)`;
+  }
+
+  document.querySelector(".slider_arrow.right").addEventListener("click", () => {
+    updateSlider("right");
+  });
+
+  document.querySelector(".slider_arrow.left").addEventListener("click", () => {
+    updateSlider("left");
+  });
+
+ 
+
+  // Open modal function
+  // function openModal(modalId) {
+  //   document.getElementById(modalId).style.display = "block";
+  //   document.getElementById("overlay").style.display = "block";
+  // }
+
+  // // Close modal function
+  // function closeModal(modalId) {
+  //   document.getElementById(modalId).style.display = "none";
+  //   document.getElementById("overlay").style.display = "none";
+  // }
+
+  // // Wait for the DOM to fully load
+  // document.addEventListener("DOMContentLoaded", function () {
+  //   const loginBtn = document.getElementById('loginBtn');
+  //   const signupBtn = document.getElementById('signupBtn');
+    
+  //   if (loginBtn) {
+  //     loginBtn.addEventListener("click", function (e) {
+  //       e.preventDefault();
+  //       openModal("loginModal");
+  //     });
+  //   }
+
+  //   if (signupBtn) {
+  //     signupBtn.addEventListener("click", function (e) {
+  //       e.preventDefault();
+  //       openModal("signupModal");
+  //     });
+  //   }
+
+    
+  //   document.getElementById("overlay").addEventListener("click", function () {
+  //     closeModal("loginModal");
+  //     closeModal("signupModal");
+  //   });
+  // });
+
+

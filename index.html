@@ -80,18 +80,53 @@
                     <ul class="nav_links">
                         <li class="active"><a href="#">Home</a></li>
                         <li><a href="#">About</a></li>
-                        <li><a href="#">Accesories</a></li>
+                        <li><a href="#">Accesories</a></li> 
                         <li><a href="#">Blog</a></li>
                         <li><a href="#">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="login_signup btns">
-                    <a href="#" class="btn">Login <i class="fa-solid fa-right-to-bracket"></i></a>
-                    <a href="#"class="btn">Sign Up <i class="fa-solid fa-user-plus"></i> </a>
+                    <a href="#" class="btn" id="loginBtn">Login &nbsp;  <i class="fa-solid fa-right-to-bracket"></i></a>
+                    <a href="#"class="btn" id="signupBtn">Sign Up &nbsp; <i class="fa-solid fa-user-plus"></i> </a>
+                    <a href="#" class="btn" id="logoutBtn">Log Out </a>
                 </div>
             </div>
         </div>
     </header>
+
+
+
+    <!-- Overlay background -->
+<div class="overlay" id="overlay"></div>
+
+
+<div class="modal" id="loginModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('loginModal')">&times;</span>
+    <h2>Login</h2>
+    <form>
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required />
+      <button type="submit">Login</button>
+    </form>
+  </div>
+</div>
+
+<!-- Signup Form Modal -->
+<div class="modal" id="signupModal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal('signupModal')">&times;</span>
+    <h2>Sign Up</h2>
+    <form>
+      <input type="text" placeholder="Username" required />
+      <input type="email" placeholder="Email" required />
+      <input type="password" placeholder="Password" required /> 
+      <input type="password" id="signupConfirmPassword" placeholder="Confirm Password"><br>
+
+      <button type="submit">Sign Up</button>
+    </form>
+  </div>
+</div>
 
     
     <div class="slider">
@@ -124,8 +159,6 @@
     </div>
 
 
-
-   
 
     <div class="banners_4">
         <div class="container">
@@ -187,6 +220,92 @@
             </div>
            </div>
     </div>
+<!-- 
+    <div class="slider_products">
+        <div class="container">
+            <div class="slide_product mySwiper">
+              <div class="products swipper-wrapper" id="swiper_item_sale">
+                <div class="swiper-slide product">
+                    <span class="sale_present">%50</span>
+                    <div class="img_product">
+                        <a href="#"> <img src="img/product/0.png" alt=""></a>
+                    </div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="name_product"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nulla quia non molestias ut deserunt eveniet vel iusto dolores sunt, magni atque mollitia suscipit praesentium earum delectus</a></p>
+                    <div class="price">
+                        <p><span>$50</span></p>
+                        <p class="old_price"></p>
+                    </div>
+                    <div class="icons">
+                        <span class="btn_add_cart">
+                            <i class="fa-solid fa-cart-shopping"></i> add to cart
+                        </span>
+                        <span class="icon_product"><i class="fa-solid fa-heart"></i></span>
+                    </div>
+                </div>
+    
+                <div class="swiper-slide product">
+                    <span class="sale_present">%50</span>
+                    <div class="img_product">
+                        <a href="#"> <img src="img/product/0.png" alt=""></a>
+                    </div>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star-half-stroke"></i>
+                    </div>
+                    <p class="name_product"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nulla quia non molestias ut deserunt eveniet vel iusto dolores sunt, magni atque mollitia suscipit praesentium earum delectus</a></p>
+                    <div class="price">
+                        <p><span>$50</span></p>
+                        <p class="old_price"></p>
+                    </div>
+                    <div class="icons">
+                        <span class="btn_add_cart">
+                            <i class="fa-solid fa-cart-shopping"></i> add to cart
+                        </span>
+                        <span class="icon_product"><i class="fa-solid fa-heart"></i></span>
+                    </div>
+                </div>
+            
+             
+              
+      
+
+              </div>
+
+            </div>
+        </div>
+    </div> -->
+
+    
+    <div class="slider_section">
+        <div class="container">
+          <div class="slider_wrapper">
+            <!-- <button class="slider_arrow left">&#10094;</button> -->
+            <div class="slider_products">
+              <div class="products" id="productContainer">
+
+              </div>
+            </div>
+            <!-- <button class="slider_arrow right">&#10095;</button> -->
+          </div>
+        </div>
+      </div>
+      
     <script src="JS/main.js"></script>
+    <script src="fetchProducts.js"></script>
+
+    <script src="JS/loginandsignup.js">
+      
+      </script>
+      
 </body>
 </html>

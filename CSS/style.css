@@ -361,3 +361,234 @@ width: 100%;
 height: 100%;
 background-color:transparent;
 }
+
+/*==========Product=========*/
+.products {
+    display: grid;
+    grid-template-columns:repeat(5, 1fr);
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  /* Container for the products grid */
+.products {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  /* Product card styling */
+  .product {
+    background: #fff;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .product:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.15);
+  }
+  
+  /* Sale percentage label */
+  .product .sale_present {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background-color: #ed0505;
+    color: #fff;
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 5px;
+    z-index: 2;
+  }
+  
+  /* Product image styling */
+  .product .img_product {
+    position: relative;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .product:hover .img_product {
+    transform: scale(1.05);
+  }
+  
+  .product .img_product img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 8px;
+  }
+  
+  /* Star ratings */
+  .stars {
+    margin: 10px 0;
+  }
+  
+  .stars i {
+    color: #f5a623;
+    font-size: 14px;
+  }
+  
+  
+  .product .name_product {
+    font-size: 14px;
+    color: #333;
+    margin: 10px 0;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+  }
+  
+  .product .name_product a {
+    color: #333;
+    text-decoration: none;
+    transition: color 0.3s ease;
+  }
+  
+  .product .name_product a:hover {
+    color: #f47600;
+  }
+  
+  /* Price section */
+  .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+  }
+  
+  .price p {
+    font-size: 16px;
+    font-weight: bold;
+  }
+  
+  .price .old_price {
+    color: #777;
+    text-decoration: line-through;
+    font-size: 14px;
+  }
+  
+
+  .product .icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+  }
+  
+  .product .icons .btn_add_cart {
+    background: #f47600;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 15px;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .product .icons .btn_add_cart:hover {
+    background: #f48400;
+    transform: scale(1.05);
+  }
+  
+  .product .icons .icon_product {
+    width: 40px;
+    height: 40px;
+    border: 1px solid #ddd;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .product .icons .icon_product:hover {
+    background-color: #f47600;
+  }
+  
+  .product .icons .icon_product i {
+    color: #333;
+    font-size: 16px;
+  }
+  
+  .product .icons .icon_product:hover i {
+    color: #fff;
+  }
+  
+  /*=========Overlay==========*/
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    background-color: rgba(0, 0, 0, 0.4);
+    z-index: 999;
+    display: none;
+  }
+  
+  /* Modal wrapper */
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+    width: 90%;
+    max-width: 400px;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+  }
+  
+  /* Modal Content */
+  .modal-content form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .modal-content input {
+    margin: 10px 0;
+    padding: 10px;
+    font-size: 15px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .modal-content button {
+    padding: 10px;
+    background-color: #f47600;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal-content button:hover {
+    background-color: #e46200;
+  }
+  
+  /* Close Button */
+  .modal .close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
