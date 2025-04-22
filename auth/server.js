@@ -52,16 +52,18 @@
 
     // Login route
     app.post('/login', (req, res) => {
-        const { username, password } = req.body;
+        const { email, password } = req.body;
         const users = readUsers();
       
-        const user = users.find((u) => u.username === username && u.password === password);
+        const user = users.find((u) => u.email === email && u.password === password);
+      
         if (!user) {
           return res.status(401).json({ message: 'Invalid credentials.' });
         }
       
         res.json({ message: 'Login successful!', username: user.username });
       });
+      
 
     app.listen(PORT, () => {
     console.log(`Server running on http://localhost:${PORT}`);
