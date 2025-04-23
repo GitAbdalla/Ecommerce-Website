@@ -721,3 +721,7 @@ footer .bottom_footer .container{
   display: block;
   opacity: 1;
 }
+
+html {
+  scroll-behavior: smooth;
+}

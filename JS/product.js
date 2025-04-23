@@ -1,5 +1,5 @@
 const query = new URLSearchParams(window.location.search);
-const productId = query.get('id');
+let productId = query.get('id');
 
 function getLoggedInUser() {
   return localStorage.getItem('username');
@@ -27,7 +27,10 @@ function addToCart(product) {
 fetch('products.json')
   .then(res => res.json())
   .then(products => {
-    const product = products.find(p => p.id == productId); // compare by id
+    if (!productId) {
+      productId = products.length ? products[0].id : null;
+    }
+    const product = products.find(p => String(p.id) === String(productId));
     if (product) {
       document.getElementById('productDetail').innerHTML = `
         <div class="product-detail-card compact">
@@ -52,9 +55,9 @@ fetch('products.json')
             </div>
             <p class="description">${product.description || "No description available."}</p>
             <div class="extra-info compact-extra">
-              <span class="buy-now">🔥 Buy Now & Pay Later</span>
-              <span class="delivery">🚚 Fast Delivery</span>
-              <span class="secure">🔒 Secure Checkout</span>
+              <span class="buy-now">&#x1F525; Buy Now &amp; Pay Later</span>
+              <span class="delivery">&#x1F69A; Fast Delivery</span>
+              <span class="secure">&#x1F510; Secure Checkout</span>
             </div>
             <br>
             <button class="btn_add_cart"><i class="fa-solid fa-cart-shopping"></i> Add to Cart</button>

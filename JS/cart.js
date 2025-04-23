@@ -41,6 +41,13 @@ function renderCart() {
   const cartItemsDiv = document.getElementById('cartItems');
   const cartTotalDiv = document.getElementById('cartTotal');
   const cartActionsDiv = document.getElementById('cartActions');
+  const user = getLoggedInUser();
+  if (!user) {
+    cartItemsDiv.innerHTML = '<p>Please log in to view your cart.</p>';
+    cartTotalDiv.innerHTML = '';
+    cartActionsDiv.innerHTML = '';
+    return;
+  }
   const cart = getCart();
   if (cart.length === 0) {
     cartItemsDiv.innerHTML = '<p>Your cart is empty.</p>';

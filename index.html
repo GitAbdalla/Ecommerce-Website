@@ -24,13 +24,6 @@
 
                     <select name="category" id="category">
                     <option value="All Categories">All Categories</option>
-                    <option value="Electronics & Digital">Electronics & Digital</option>
-                    <option value="Phones & Tablet">Phones & Tablet</option>
-                    <option value="Fashion & Clothings">Fashion & Clothings</option>
-                    <option value="Telivsion & Monitor">Televsion & Monitor</option>
-                    <option value="Jewrely & Watches">Jewrely & Watches</option>
-                    <option value="Washing Machine">Washing Machine</option>
-                    <option value="Toys & Hobbies">Toys & Hobbies</option>
                     </select>
                 </div>
                 <input type="text" name="search" id="search" placeholder="Search for Products" required>
@@ -60,29 +53,11 @@
         <div class="bottom_header">
             <div class="container">
                 <nav class="nav">
-                    <div onclick="openCategoryList()" class="category_nav">
-                        <div class="category_btn">
-                            <i class="fa-solid fa-bars"></i>
-                            <p>Browse Category</p>
-                            <i class="fa-solid fa-arrow-down"></i>
-                        </div>
-                        <div class="category_nav_list">
-                            <a href="#">Top 10 Offers</a>
-                            <a href="#">Electronics & Digital</a>
-                            <a href="#">Phones & Tablet</a>
-                            <a href="#">Fashion & Clothings</a>
-                            <a href="#">Televsion & Monitor</a>
-                            <a href="#">Jewrely & Watches</a>
-                            <a href="#">Washing Machine</a>
-                            <a href="#">Toys & Hobbies</a>
-                        </div>
-                    </div>
                     <ul class="nav_links">
                         <li class="active"><a href="#">Home</a></li>
-                        <li><a href="#">About</a></li>
-                        <li><a href="#">Accesories</a></li> 
-                        <li><a href="#">Blog</a></li>
-                        <li><a href="#">Contact</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#last-banner">Sales</a></li> 
+                        <li><a href="#footer">Contact</a></li>
                     </ul>
                 </nav>
                 <div class="login_signup btns">
@@ -94,12 +69,10 @@
         </div>
     </header>
 
-
-
     <!-- Overlay background -->
 <div class="overlay" id="overlay"></div>
 
-
+<!-- Modal for login and signup -->
 <div class="modal" id="loginModal">
   <div class="modal-content">
     <span class="close" onclick="closeModal('loginModal')">&times;</span>
@@ -220,70 +193,7 @@
             </div>
            </div>
     </div>
-<!-- 
-    <div class="slider_products">
-        <div class="container">
-            <div class="slide_product mySwiper">
-              <div class="products swipper-wrapper" id="swiper_item_sale">
-                <div class="swiper-slide product">
-                    <span class="sale_present">%50</span>
-                    <div class="img_product">
-                        <a href="#"> <img src="img/product/0.png" alt=""></a>
-                    </div>
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <p class="name_product"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nulla quia non molestias ut deserunt eveniet vel iusto dolores sunt, magni atque mollitia suscipit praesentium earum delectus</a></p>
-                    <div class="price">
-                        <p><span>$50</span></p>
-                        <p class="old_price"></p>
-                    </div>
-                    <div class="icons">
-                        <span class="btn_add_cart">
-                            <i class="fa-solid fa-cart-shopping"></i> add to cart
-                        </span>
-                        <span class="icon_product"><i class="fa-solid fa-heart"></i></span>
-                    </div>
-                </div>
-    
-                <div class="swiper-slide product">
-                    <span class="sale_present">%50</span>
-                    <div class="img_product">
-                        <a href="#"> <img src="img/product/0.png" alt=""></a>
-                    </div>
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                    </div>
-                    <p class="name_product"><a href="#">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur nulla quia non molestias ut deserunt eveniet vel iusto dolores sunt, magni atque mollitia suscipit praesentium earum delectus</a></p>
-                    <div class="price">
-                        <p><span>$50</span></p>
-                        <p class="old_price"></p>
-                    </div>
-                    <div class="icons">
-                        <span class="btn_add_cart">
-                            <i class="fa-solid fa-cart-shopping"></i> add to cart
-                        </span>
-                        <span class="icon_product"><i class="fa-solid fa-heart"></i></span>
-                    </div>
-                </div>
-            
-             
-              
-      
 
-              </div>
-
-            </div>
-        </div>
-    </div> -->
     <div class="banners">
         <div class="container">
             <div class="banners_boxs banner_3_img">
@@ -310,7 +220,7 @@
       </div>
 
     
-    <div class="banners">
+    <div class="banners" id="last-banner">
         <div class="container">
           <div class="banners_boxs banner_2_img">
               <a href="#" class="box"> <img src="img/banner_box4.jpg" alt=""></a>
@@ -323,7 +233,7 @@
 
 
 
-    <footer>
+    <footer id="footer">
         <div class="container">
             <div class="big_row">
                 <img class="logo_footer" style=" width: 120px;" src="https://www.logodesign.net/logo/dollar-sign-incorporated-with-shopping-cart-5403ld.png?nwm=1&nws=1&industry=ecommerce&sf=&txt_keyword=All" alt="">
