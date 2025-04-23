@@ -2,7 +2,7 @@
     display: flex;
     gap: 30px;
     max-width: 900px;
-    margin: 50px auto;
+    margin: 0 auto 50px auto;
     padding: 30px;
     background: linear-gradient(135deg, #fff 60%, #f6e6ff 100%);
     border-radius: 22px;
@@ -198,7 +198,7 @@
   display: flex;
   gap: 22px;
   max-width: 700px;
-  margin: 40px auto;
+  margin: 0 auto 40px auto;
   padding: 18px 18px 18px 12px;
   background: linear-gradient(120deg, #fff 72%, #f7e8ff 100%);
   border-radius: 18px;

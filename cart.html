@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="CSS/cartStyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+</head>
+<body>
+    <header>
+      <!-- You can reuse your header here if you want -->
+    </header>
+    <main>
+        <div class="container">
+            <h1 class="cart-title"><i class="fa fa-shopping-cart" style="margin-right:10px;color:#ff8716;"></i>Your Cart</h1>
+            <div id="cartItems"></div>
+            <div id="cartTotal"></div>
+            <div id="cartActions"></div>
+            <div id="orderModal"><div class="modal-content">Your order is on its way! 🚚<br>Thank you for shopping.<br><button onclick="closeOrderModal()" style="margin-top:18px;padding:8px 22px;border-radius:6px;background:#ff8716;color:#fff;border:none;font-size:1rem;cursor:pointer;">Close</button></div></div>
+        </div>
+    </main>
+    <script src="JS/cart.js"></script>
+    <script>
+        function closeOrderModal() {
+          document.getElementById('orderModal').style.display = 'none';
+        }
+    </script>
+</body>
+</html>
