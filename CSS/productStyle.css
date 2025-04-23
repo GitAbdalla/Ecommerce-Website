@@ -1,0 +1,138 @@
+.product-detail-card {
+    display: flex;
+    gap: 30px;
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 30px;
+    background: #fff;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  
+  .product-image img {
+    width: 300px;
+    border-radius: 12px;
+    object-fit: contain;
+    background: #f7f7f7;
+  }
+  
+  .product-info {
+    flex: 1;
+    min-width: 250px;
+  }
+  
+  .product-info h1 {
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 10px;
+  }
+  
+  .description {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 15px;
+    line-height: 1.5;
+  }
+  
+  .price-block {
+    font-size: 24px;
+    color: #27ae60;
+    font-weight: bold;
+    margin-bottom: 15px;
+  }
+  
+  .old-price {
+    text-decoration: line-through;
+    color: #aaa;
+    font-size: 18px;
+    margin-left: 10px;
+  }
+  
+  .colors {
+    margin-bottom: 20px;
+  }
+  
+  .color-dots {
+    display: flex;
+    gap: 10px;
+    margin-top: 5px;
+  }
+  
+  .dot {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #ccc;
+  }
+  
+  .buttons {
+    display: flex;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  
+  .btn_add_cart {
+    padding: 12px 20px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+  }
+  
+  .btn_add_cart {
+    background-color: #ff8716;
+    color: white;
+  }
+  
+  .btn_add_cart:hover {
+    background: #f48400;
+    transform: scale(1.05);
+  }
+  
+  .btn_buy_now {
+    background-color: #e74c3c;
+    color: white;
+  }
+    
+  .extra-info {
+    margin-top: 20px;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+  }
+  
+  .extra-info p {
+    margin: 6px 0;
+    display: flex;
+    align-items: center;
+  }
+  
+  .buy-now {
+    color: #e74c3c;
+    font-weight: bold;
+  }
+  
+  .delivery {
+    color: #2ecc71;
+  }
+  
+  .secure {
+    color: #3498db;
+  }
+  .product-trust {
+  margin-top: 20px;
+}
+
+.product-trust p {
+  margin: 4px 0;
+  font-size: 15px;
+}
+
+.trust-badge {
+  margin-top: 10px;
+  width: 100px;
+}

@@ -4,42 +4,48 @@
     "img":"img/product/0.png",
     "name": "SAMSUNG 55 Inch UHD 4K Smart TV With Receiver",
     "price": 350,
-    "catetory":"electronics"
+    "catetory":"electronics",
+    "description": "Experience stunning visuals with this 55-inch 4K UHD Smart TV from Samsung, featuring built-in receiver and smart features for seamless streaming."
   },
   {
     "id": 1,
     "img": "img/product/1.png",
     "name": "Redmi 13C Dual SIM with 6GB RAM",
     "price": 280,
-    "catetory":"mobiles"
+    "catetory":"mobiles",
+    "description": "A powerful dual SIM smartphone with 6GB RAM and a smooth user experience, perfect for everyday use and multitasking."
   },
   {
     "id": 2,
     "img": "img/product/2.png",
     "name": "Dell Laptop Latitude 5530 Core i7-1255U 8GB SSD",
     "price": 400,
-    "catetory":"electronics"
+    "catetory":"electronics",
+    "description": "High-performance Dell Latitude laptop with 12th Gen Core i7 processor, 8GB RAM, and fast SSD storage for business and personal productivity."
   },
   {
     "id": 3,
     "img": "img/product/3.png",
     "name": "Canon EOS RP Mirrorless Camera",
     "price": 530,
-    "catetory":"electronics"
+    "catetory":"electronics",
+    "description": "Capture stunning photos and videos with the lightweight Canon EOS RP mirrorless camera, ideal for photography enthusiasts and professionals."
   },
   {
     "id": 4,
     "img": "img/product/4.png",
     "name": "OPPO A18 128GB 4GB Glowing Black",
     "price": 250,
-    "catetory":"mobiles"
+    "catetory":"mobiles",
+    "description": "Sleek and stylish smartphone with 128GB storage, 4GB RAM, and a stunning Glowing Black finish for smooth performance and storage."
   },
   {
     "id": 5,
     "img": "img/product/5.png",
     "name": "Samsung 27-Inch G55C Odyssey QHD 4k",
     "price": 280,
-    "catetory":"electronics"
+    "catetory":"electronics",
+    "description": "Immerse yourself in gaming and entertainment with Samsung’s 27-inch QHD 4K curved Odyssey monitor for ultra-smooth visuals."
   },
   {
     "id": 6,
@@ -47,21 +53,24 @@
     "name": "Infinix Smart (Galaxy White, 4GB RAM, 64GB Storage)",
     "price": 220,
     "old_price": 300,
-    "catetory":"mobiles"
+    "catetory":"mobiles",
+    "description": "A budget-friendly phone offering smooth performance with 4GB RAM and 64GB storage in a sleek Galaxy White design."
   },
   {
     "id": 7,
     "img": "img/product/7.png",
     "name": "HP Victus Gaming Laptop 8RAM SSD",
     "price": 370,
-    "catetory":"electronics"
+    "catetory":"electronics",
+    "description": "Game and work on-the-go with the powerful HP Victus, featuring 8GB RAM and SSD for fast, smooth gameplay and multitasking."
   },
   {
     "id": 8,
     "img": "img/product/8.png",
     "name": "Xiaomi Redmi 13C Dual SIM 8GB",
     "price": 320,
-    "catetory":"mobiles"
+    "catetory":"mobiles",
+    "description": "Powerful performance meets value in this Redmi 13C smartphone with 8GB RAM and dual SIM support for maximum flexibility."
   },
   {
     "id": 9,
@@ -69,14 +78,16 @@
     "name": "Handheld Barcode Scanner 1D/2D/QR Code",
     "price": 80,
     "old_price": 100,
-    "catetory":"electronics"
+    "catetory":"electronics",
+    "description": "Versatile barcode scanner supporting 1D, 2D, and QR codes, ideal for retail, warehouses, and office environments."
   },
   {
     "id": 10,
     "img": "img/product/10.png",
     "name": "Large Venue building mapping Projector",
     "price": 300,
-    "catetory":"electronics"
+    "catetory":"electronics",
+    "description": "High-brightness projector ideal for large venues and building mapping, delivering sharp and vivid projections for presentations or events."
   },
   {
     "id": 11,
@@ -84,28 +95,32 @@
     "name": "Infinix Hot 40i (RAM: 4+4GB, 128GB)",
     "price": 260,
     "old_price": 300,
-    "catetory":"mobiles"
+    "catetory":"mobiles",
+    "description": "The Infinix Hot 40i offers an extended 8GB RAM with 128GB storage, ensuring a smooth and efficient smartphone experience."
   },
   {
     "id": 12,
     "img": "img/product/12.png",
     "name": "HP DeskJet 2710 Printer, All-in-One",
     "price": 370,
-    "catetory":"electronics"
+    "catetory":"electronics",
+    "description": "Compact all-in-one printer from HP with printing, scanning, and copying features – ideal for home or small office use."
   },
   {
     "id": 13,
     "img": "img/product/13.png",
     "name": "Fuzzy Logic Rice Cooker DIGITAL-JAR 1.8L 940W – HD4515/67",
     "price": 490,
-    "catetory":"appliances"
+    "catetory":"appliances",
+    "description": "Smart rice cooker with Fuzzy Logic tech and digital control for perfectly cooked meals every time. 1.8L capacity and 940W power."
   },
   {
     "id": 14,
     "img": "img/product/14.png",
     "name": "Sencor STS 5070SS Electric Toaster for Four Slices",
     "price": 340,
-    "catetory":"appliances"
+    "catetory":"appliances",
+    "description": "Stylish 4-slice electric toaster with adjustable settings and stainless steel finish, ideal for quick and even toasting."
   },
   {
     "id": 15,
@@ -113,7 +128,8 @@
     "name": "Infinix Smart 6 Plus (Miracle Black)",
     "price": 240,
     "old_price": 300,
-    "catetory":"mobiles"
+    "catetory":"mobiles",
+    "description": "Affordable smartphone featuring sleek Miracle Black finish, large display, and solid performance for daily use."
   },
   {
     "id": 16,
@@ -121,28 +137,32 @@
     "name": "Washing Machine 959 Series 8kg Senator Aqua SX, Silver",
     "price": 600,
     "old_price": 700,
-    "catetory":"appliances"
+    "catetory":"appliances",
+    "description": "Powerful 8kg washing machine with advanced features for thorough cleaning and energy efficiency in a stylish silver finish."
   },
   {
     "id": 17,
     "img": "img/product/17.png",
     "name": "HIKVISION PTZ Camera 4K Outdoo",
     "price": 185,
-    "catetory":"electronics"
+    "catetory":"electronics",
+    "description": "High-resolution 4K PTZ outdoor camera from HIKVISION for security and surveillance with wide-angle and zoom capabilities."
   },
   {
     "id": 18,
     "img": "img/product/18.png",
     "name": "OPPO Reno11 5G 256GB 12GB",
     "price": 225,
-    "catetory":"mobiles"
+    "catetory":"mobiles",
+    "description": "Premium smartphone with 5G support, 12GB RAM, and 256GB storage, delivering high performance and seamless connectivity."
   },
   {
     "id": 19,
     "img": "img/product/19.png",
     "name": "VIVAX kettle WH-175L with a capacity of 1.7 ",
     "price": 140,
-    "catetory":"appliances"
+    "catetory":"appliances",
+    "description": "Fast-boiling electric kettle with 1.7L capacity and sleek design, perfect for home or office use."
   },
   {
     "id": 20,
@@ -150,28 +170,32 @@
     "name": "Kenstar Ester ABS Plastic 750W Mixer Grinder",
     "price": 280,
     "old_price": 330,
-    "catetory":"appliances"
+    "catetory":"appliances",
+    "description": "Durable and efficient 750W mixer grinder with multiple jars, ideal for blending, grinding, and food prep tasks."
   },
   {
     "id": 21,
     "img": "img/product/21.png",
     "name": "Multifunctional Food Processor",
     "price": 350,
-    "catetory":"appliances"
+    "catetory":"appliances",
+    "description": "Versatile food processor with multiple attachments for slicing, chopping, blending, and more – your kitchen’s best assistant."
   },
   {
     "id": 22,
     "img": "img/product/22.png",
     "name": "Zanussi Washing Machine 8 Kg 1200 RPM ",
     "price": 580,
-    "catetory":"appliances"
+    "catetory":"appliances",
+    "description": "Reliable Zanussi washing machine with 8kg capacity and 1200 RPM spin speed for efficient and thorough washing."
   },
   {
     "id": 23,
     "img": "img/product/23.png",
     "name": "Sharp 42 Lt Electronic Oven Convection",
     "price": 400,
-    "catetory":"appliances"
+    "catetory":"appliances",
+    "description": "Spacious 42-liter convection oven from Sharp, ideal for baking, grilling, and roasting with electronic controls."
   },
   {
     "id": 24,
@@ -179,6 +203,7 @@
     "name": "Lenovo Monitor Legion R27fc-30 Gaming Curved",
     "price": 300,
     "old_price": 380,
-    "catetory":"electronics"
+    "catetory":"electronics",
+    "description": "Curved 27-inch gaming monitor with high refresh rate and immersive display for an ultimate gaming experience."
   }
 ]
