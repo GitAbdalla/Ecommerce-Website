@@ -700,3 +700,24 @@ footer .bottom_footer .container{
   align-items: center;
   padding: 5px 0;
 }
+
+#notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  font-size: 16px;
+  z-index: 9999;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+
+#notification.show {
+  display: block;
+  opacity: 1;
+}

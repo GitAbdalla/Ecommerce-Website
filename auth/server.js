@@ -61,7 +61,7 @@
           return res.status(401).json({ message: 'Invalid credentials.' });
         }
       
-        res.json({ message: 'Login successful!', username: user.username });
+        res.json({ message: 'Loggedin successfully!', username: user.username });
       });
       
 

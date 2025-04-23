@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", function () {
   const loginForm = document.querySelector("#loginModal form");
   const signupForm = document.querySelector("#signupModal form");
 
-  // === Handle UI if user is already logged in ===
   const loggedInUser = localStorage.getItem("username");
   if (loggedInUser) {
     loginBtn.textContent = loggedInUser;
@@ -59,7 +58,7 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       const data = await res.json();
-      alert(data.message);
+      showNotification(data.message, res.ok);
 
       if (res.ok) {
         localStorage.setItem("username", data.username);
@@ -70,7 +69,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     } catch (err) {
       console.error("Login error:", err);
-      alert("Login error");
+      showNotification("Login error");
     }
   });
 
@@ -84,7 +83,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const confirmPassword = inputs[3].value;
 
     if (password !== confirmPassword) {
-      alert("Passwords do not match.");
+      showNotification("Passwords do not match.", false); // Show error notification
       return;
     }
 
@@ -96,11 +95,17 @@ document.addEventListener("DOMContentLoaded", function () {
       });
 
       const data = await res.json();
-      alert(data.message);
-      closeModal("signupModal"); // Do NOT log them in after signup
+
+      if (res.ok) {
+        // Show success notification and close modal
+        showNotification(data.message || "Signup successful!", true);
+        closeModal("signupModal");
+      } else {
+        // Show error notification but don't close modal
+        showNotification(data.message || "Signup error", false);
+      }
     } catch (err) {
-      console.error("Signup error:", err);
-      alert("Signup error");
+      showNotification("Signup error", false); // Show error notification if something goes wrong
     }
   });
 
@@ -110,5 +115,23 @@ document.addEventListener("DOMContentLoaded", function () {
     loginBtn.textContent = "Login";
     signupBtn.style.display = "inline-block";
     logoutBtn.style.display = "none";
+    showNotification("Loggedout Successfully")
   });
 });
+
+//notifications
+function showNotification(message, isSuccess = true) {
+  const notif = document.getElementById("notification");
+  notif.textContent = message;
+  notif.style.backgroundColor = isSuccess ? "#4CAF50" : "#f44336"; // green or red
+  notif.classList.add("show");
+
+  setTimeout(() => {
+    notif.classList.remove("show");
+    setTimeout(() => {
+      notif.style.display = "none";
+    }, 500);
+  }, 3000);
+
+  notif.style.display = "block";
+}
