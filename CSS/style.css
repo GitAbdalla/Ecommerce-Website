@@ -732,3 +732,83 @@ html {
   font-family: 'Font Awesome 6 Free', 'Font Awesome 5 Free', 'FontAwesome', Arial, Helvetica, sans-serif !important;
   font-weight: 900;
 }
+
+/* --- Back to Top Button Styles --- */
+#backToTop {
+  display: none;
+  position: fixed;
+  right: 28px;
+  bottom: 40px;
+  z-index: 9999;
+  background: #ff8716;
+  color: #fff;
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.7rem;
+  cursor: pointer;
+  opacity: 0.85;
+}
+#backToTop:hover {
+  background: #ffb347;
+  opacity: 1;
+}
+#backToTop i {
+  line-height: 48px;
+}
+@media (max-width: 600px) {
+  #backToTop {
+    right: 12px;
+    bottom: 18px;
+    width: 40px;
+    height: 40px;
+    font-size: 1.2rem;
+  }
+  #backToTop i {
+    line-height: 40px;
+  }
+}
+
+/* Slider Arrow Styles */
+.slider_arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  background: #ff87169d;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  opacity: 0.9;
+  box-shadow: 0 2px 8px rgba(120,40,160,0.09);
+  transition: background 0.2s, transform 0.2s;
+}
+.slider_arrow.left {
+  left: 10px;
+}
+.slider_arrow.right {
+  right: 10px;
+}
+.slider_arrow:hover {
+  background: #ffb347;
+  opacity: 1;
+  transform: translateY(-50%) scale(1.07);
+}
+@media (max-width: 700px) {
+  .slider_arrow {
+    width: 28px;
+    height: 28px;
+    font-size: 1.1rem;
+  }
+}

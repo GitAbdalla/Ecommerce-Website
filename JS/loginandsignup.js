@@ -47,8 +47,9 @@ document.addEventListener("DOMContentLoaded", function () {
   // === LOGIN ===
   loginForm.addEventListener("submit", async function (e) {
     e.preventDefault();
-    const email = this.querySelector('input[type="email"]').value.trim();
-    const password = this.querySelector('input[type="password"]').value;
+    const inputs = this.querySelectorAll("input");
+    const email = inputs[0].value.trim();
+    const password = inputs[1].value;
 
     try {
       const res = await fetch("http://localhost:3000/login", {
@@ -56,7 +57,6 @@ document.addEventListener("DOMContentLoaded", function () {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),
       });
-
       const data = await res.json();
       showNotification(data.message, res.ok);
 
@@ -66,6 +66,10 @@ document.addEventListener("DOMContentLoaded", function () {
         signupBtn.style.display = "none";
         logoutBtn.style.display = "inline-block";
         closeModal("loginModal");
+        
+        if (typeof updateCartCount === 'function') {
+          setTimeout(updateCartCount, 0);
+        }
       }
     } catch (err) {
       console.error("Login error:", err);
@@ -100,6 +104,9 @@ document.addEventListener("DOMContentLoaded", function () {
         // Show success notification and close modal
         showNotification(data.message || "Signup successful!", true);
         closeModal("signupModal");
+        // Set username and update cart count
+        localStorage.setItem("username", data.username);
+        if (typeof updateCartCount === 'function') updateCartCount();
       } else {
         // Show error notification but don't close modal
         showNotification(data.message || "Signup error", false);
@@ -115,7 +122,8 @@ document.addEventListener("DOMContentLoaded", function () {
     loginBtn.textContent = "Login";
     signupBtn.style.display = "inline-block";
     logoutBtn.style.display = "none";
-    showNotification("Loggedout Successfully")
+    showNotification("Loggedout Successfully");
+    if (typeof updateCartCount === 'function') updateCartCount();
   });
 });
 
@@ -123,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
 function showNotification(message, isSuccess = true) {
   const notif = document.getElementById("notification");
   notif.textContent = message;
-  notif.style.backgroundColor = isSuccess ? "#4CAF50" : "#f44336"; // green or red
+  notif.style.backgroundColor = isSuccess ? "#4CAF50" : "#f44336";
   notif.classList.add("show");
 
   setTimeout(() => {
