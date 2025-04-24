@@ -21,17 +21,35 @@ document.addEventListener("DOMContentLoaded", function () {
   const slides = document.querySelectorAll('.swiper-slide');
   let currentSlide = 0;
 
-  function showSlide(index) {
-    if (index < 0) index = 0;
-    if (index > slides.length - 1) index = slides.length - 1;
-    wrapper.style.transform = `translateX(-${index * 100}%)`;
-    currentSlide = index;
-   
+  function prevSlide() {
+    if (currentSlide <= 0) {
+      currentSlide = slides.length - 1;
+    } else {
+      currentSlide--;
+    }
+    setImg();
+  }
+
+  function nextSlide() {
+    if (currentSlide >= slides.length - 1) {
+      currentSlide = 0;
+    } else {
+      currentSlide++;
+    }
+    setImg();
+  }
+
+  function setImg() {
+    wrapper.style.transition = 'transform 0.4s ease-in-out';
+    wrapper.style.transform = `translateX(-${currentSlide * 100}%)`;
     const bullets = document.querySelectorAll('.swiper-pagination span');
     if (bullets.length) {
       bullets.forEach(b => b.classList.remove('swiper-pagination-bullet-active'));
-      if (bullets[index]) bullets[index].classList.add('swiper-pagination-bullet-active');
+      if (bullets[currentSlide]) bullets[currentSlide].classList.add('swiper-pagination-bullet-active');
     }
+    setTimeout(() => {
+      wrapper.style.transition = '';
+    }, 400);
   }
 
   // Arrow event listeners
@@ -40,15 +58,15 @@ document.addEventListener("DOMContentLoaded", function () {
   if (leftArrow && rightArrow) {
     leftArrow.addEventListener('click', function(e) {
       e.preventDefault();
-      showSlide(currentSlide - 1);
+      prevSlide();
     });
     rightArrow.addEventListener('click', function(e) {
       e.preventDefault();
-      showSlide(currentSlide + 1);
+      nextSlide();
     });
   }
 
-  showSlide(0);
+  setImg();
 
   //  Back to Top 
   const backToTopBtn = document.getElementById('backToTop');
