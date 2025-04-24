@@ -34,6 +34,9 @@
     if (!/^\S+@\S+\.\S+$/.test(email)) {
         return res.status(400).json({ message: 'Invalid email format.' });
     }
+    if(password.length < 8 ){
+        return res.status(400).json({ message: 'Password must be at least 8 characters long.' });
+    }
 
     if (password !== confirmPassword) {
         return res.status(400).json({ message: 'Passwords do not match.' });
@@ -41,6 +44,9 @@
 
     if (users.find((u) => u.username === username)) {
         return res.status(400).json({ message: 'Username already exists.' });
+    }
+    if(users.find((u) => u.email === email)) {
+        return res.status(400).json({ message: 'Email already exists.' });
     }
 
     // Save new user
