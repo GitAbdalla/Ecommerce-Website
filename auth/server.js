@@ -6,10 +6,10 @@ const app = express();
 const PORT = 3000;
 
 
-app.use(cors())
+app.use(cors());
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, '..')));
 app.use(express.json());
-
 
 const readUsers = () => {
 const data = fs.readFileSync('users.json');
