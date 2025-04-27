@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
     <link rel="stylesheet" href="CSS/style.css">
+    <!-- <link rel="stylesheet" href="CSS/filter-bar-responsive.css"> -->
 </head>
 <body>
 
@@ -217,11 +218,11 @@
         <div class="container">
           <div class="slider_wrapper">
       
-            <div class="filter-bar" style="margin: 20px auto; display: flex; gap: 20px; align-items: center; justify-content: center; max-width: 500px;">
+            <div class="filter-bar">
               <label for="minPrice">Min Price:</label>
-              <input type="number" id="minPrice" min="0" placeholder="0" style="width: 80px;">
+              <input type="number" id="minPrice" min="0" placeholder="0">
               <label for="maxPrice">Max Price:</label>
-              <input type="number" id="maxPrice" min="0" placeholder="1000" style="width: 80px;">
+              <input type="number" id="maxPrice" min="0" placeholder="1000">
               <button class="btn" id="applyPriceFilter" type="button"><i class="fa fa-filter"></i> Apply</button>
             </div>
 

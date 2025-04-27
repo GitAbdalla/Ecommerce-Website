@@ -1,4 +1,3 @@
-
 function getLoggedInUser() {
   return localStorage.getItem('username');
 }

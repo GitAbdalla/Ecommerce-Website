@@ -1,4 +1,3 @@
-// Cart logic for Ecommerce Website
 function getLoggedInUser() {
   return localStorage.getItem('username');
 }
